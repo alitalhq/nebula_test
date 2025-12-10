@@ -24,6 +24,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
+        'image_processed_subscriber = nebula_test.image_processed_subscriber:main',
+        'image_raw_subscriber = nebula_test.image_raw_subscriber:main'
         ],
     },
 )
