@@ -20,11 +20,9 @@ class ImageProcessedSubscriber(Node):
         # ---- CAMERA QoS'larını birebir aynı oluştur ----
         image_qos = QoSProfile(depth=1)
         image_qos.reliability = QoSReliabilityPolicy.BEST_EFFORT
-        image_qos.history = QoSHistoryPolicy.KEEP_LAST
 
         cam_info_qos = QoSProfile(depth=1)
         cam_info_qos.reliability = QoSReliabilityPolicy.RELIABLE
-        cam_info_qos.history = QoSHistoryPolicy.KEEP_LAST
 
         # ---- Subscribers ----
         self.image_sub = self.create_subscription(
